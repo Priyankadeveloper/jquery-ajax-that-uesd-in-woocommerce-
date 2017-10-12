@@ -1,0 +1,15 @@
+
+do it on function.php
+------------
+
+<select onChange="getData();" id="asection">
+		  <option>Select The value</option>
+
+  <option value="10">A</option>
+    <option value="20">B</option>
+    ----------------------------------------
+
+jqury
+
+var variationa_ida = jQuery('#asection').val();
+  var variationa_txt = jQuery('#asection option:selected').text();
