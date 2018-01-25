@@ -1,1 +1,44 @@
 
+<?php
+
+/**
+ * Template Name: ajaxtest
+ */
+
+
+?>
+<head>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+function fetch()
+{
+$.post('/wordpress/wp-admin/admin-ajax.php', {'action':'my_action'} ,function(response){
+
+$('#fetchdata').append(response);
+});
+
+}
+</script> 
+</head>
+<!--add new code-->
+<body>
+<div id="fetchdata"></div>
+<button onclick="fetch()">click here</button>
+</body>
+----------------------------
+other do in function.php
+---------------------------
+add_action('wp_ajax_my_action','data_fetch');
+add_action('wp_ajax_my_action','data_fetch');
+
+function data_fetch()
+{
+
+$the_query=new WP_Query(array('post_per_page'=>1));
+
+echo "fhfgh";
+
+	
+
+}
