@@ -1,0 +1,1 @@
+wp_enqueue_script('vendor-sound-js' , plugins_url( 'vendor-ajax.js', __FILE__) , array('jquery') , '1.0',true);
